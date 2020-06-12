@@ -13,7 +13,7 @@ import { applyMiddleware, createStore } from 'redux';
 
 /* Here we are storing the client access token of our dialogflow agent to the contsant variable, accessToken. But we should not hardcode
    any access token. We should always pass it via .env file. */
-const accessToken = '617a4956dfdc41259a387ac93ddbec09';
+const accessToken = process.env.TokenChanged;
 
 // We are creating a instance of ApiAiClient called client inside which we are passing the accessToken as argument.
 const client = new ApiAiClient({ accessToken });
